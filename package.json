@@ -1,6 +1,6 @@
 {
     "name": "react-native-local-authenticate-improved",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "description": "React Native: Locale Authenticate",
     "main": "RNLocalAuthenticate.js",
     "types": "index.d.ts",
