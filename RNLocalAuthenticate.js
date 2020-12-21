@@ -1,11 +1,10 @@
-import { ViewPropTypes, NativeModules, Platform } from "react-native";
-import PropTypes from "prop-types";
+import { NativeModules } from "react-native";
 
 let { RNLocalAuthenticate } = NativeModules;
 
 class LocalAuthenticate {
   static HasHardware() {
-    return new Promise(function (resolve, reject) {
+    return new Promise(function (resolve) {
         RNLocalAuthenticate.HasHardware((hasHardware) => {
             resolve(hasHardware)
         })
@@ -13,7 +12,7 @@ class LocalAuthenticate {
   }
 
   static IsEnrolled() {
-    return new Promise(function (resolve, reject) {
+    return new Promise(function (resolve) {
       RNLocalAuthenticate.IsEnrolled((isEnrolled) => {
         resolve(isEnrolled)
       })
@@ -21,7 +20,7 @@ class LocalAuthenticate {
   }
 
   static SupportedAuthenticationTypes() {
-    return new Promise(function (resolve, reject) {
+    return new Promise(function (resolve) {
       RNLocalAuthenticate.SupportedAuthenticationTypes((supportedAuthenticationTypes) => {
         resolve(supportedAuthenticationTypes)
       })
@@ -29,7 +28,7 @@ class LocalAuthenticate {
   }
   
   static Authenticate(reason) {
-    return new Promise(function (resolve, reject) {
+    return new Promise(function (resolve) {
       RNLocalAuthenticate.Authenticate(reason, (authenticate) => {
         resolve(authenticate)
       })
