@@ -8,6 +8,6 @@ type LocalAuthenticate = {
     cancelAuthenticate(): Promise<void>
 }
 
-const localAuthenticate: LocalAuthenticate
+declare const localAuthenticate: LocalAuthenticate
 
 export default localAuthenticate
