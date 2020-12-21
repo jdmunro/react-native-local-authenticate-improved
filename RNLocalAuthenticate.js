@@ -6,7 +6,7 @@ class LocalAuthenticate {
   static HasHardware() {
     return new Promise(function (resolve) {
         RNLocalAuthenticate.HasHardware((hasHardware) => {
-            resolve(hasHardware)
+            resolve(hasHardware === 1 ? true : false)
         })
     });
   }
@@ -14,7 +14,7 @@ class LocalAuthenticate {
   static IsEnrolled() {
     return new Promise(function (resolve) {
       RNLocalAuthenticate.IsEnrolled((isEnrolled) => {
-        resolve(isEnrolled)
+        resolve(isEnrolled === 1 ? true : false)
       })
     });
   }
@@ -30,7 +30,7 @@ class LocalAuthenticate {
   static Authenticate(reason) {
     return new Promise(function (resolve) {
       RNLocalAuthenticate.Authenticate(reason, (authenticate) => {
-        resolve(authenticate)
+        resolve(authenticate === 1 ? true : false)
       })
     });
   }
