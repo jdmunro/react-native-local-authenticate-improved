@@ -49,4 +49,4 @@ class LocalAuthenticate {
   }
 }
 
-export { LocalAuthenticate as RNLocalAuthenticate }
+export default LocalAuthenticate
