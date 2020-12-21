@@ -12,7 +12,7 @@ import {
   View,
   Button
 } from 'react-native';
-import { RNLocalAuthenticate } from 'react-native-local-authenticate'
+import { RNLocalAuthenticate } from 'react-native-local-authenticate-improved'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +

@@ -41,7 +41,7 @@ target 'Example' do
 
   use_native_modules!
 
-  pod 'RNLocalAuthenticate', :path => '../node_modules/react-native-local-authenticate/ios'
+  pod 'RNLocalAuthenticate', :path => '../node_modules/react-native-local-authenticate-improved/ios'
 
 end
 

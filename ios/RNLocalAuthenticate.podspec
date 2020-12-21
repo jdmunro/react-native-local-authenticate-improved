@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage               = package['homepage']
   s.license                = package['license']
   s.author                 = package['author']
-  s.source                 = { :git => 'https://github.com/prscX/react-native-local-authenticate.git', :tag => 'master' }
+  s.source                 = { :git => 'https://github.com/jdmunro/react-native-local-authenticate-improved.git', :tag => 'master' }
 
   s.platform               = :ios, '9.0'
   s.ios.deployment_target  = '8.0'
