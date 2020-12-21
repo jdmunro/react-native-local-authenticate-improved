@@ -12,7 +12,7 @@ import {
   View,
   Button
 } from 'react-native';
-import { RNLocalAuthenticate } from 'react-native-local-authenticate-improved'
+import LocalAuthenticate from 'react-native-local-authenticate-improved'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -36,22 +36,22 @@ export default class App extends Component<Props> {
           {instructions}
         </Text>
         <Button onPress={() => {
-          RNLocalAuthenticate.HasHardware().then((hasHardware) => {
+          LocalAuthenticate.hasHardware().then((hasHardware) => {
             console.log('Has Hardware: ' + hasHardware)
           })
         }} title={'Has Hardware'} />
         <Button onPress={() => {
-          RNLocalAuthenticate.IsEnrolled().then((isEnrolled) => {
+          LocalAuthenticate.isEnrolled().then((isEnrolled) => {
             console.log('Is Enrolled: ' + isEnrolled)
           })
         }} title={'Is Enrolled'} />
         <Button onPress={() => {
-          RNLocalAuthenticate.SupportedAuthenticationTypes().then((isEnrolled) => {
+          LocalAuthenticate.supportedAuthenticationTypes().then((isEnrolled) => {
             console.log('Supported Authentication Types: ' + isEnrolled)
           })
         }} title={'Supported Authentication Types'} />
         <Button onPress={() => {
-          RNLocalAuthenticate.Authenticate('reason').then((isEnrolled) => {
+          LocalAuthenticate.authenticate('reason').then((isEnrolled) => {
             console.log('Authenticate: ' + isEnrolled)
           })
         }} title={'Authenticate'} />
