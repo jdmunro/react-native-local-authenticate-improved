@@ -3,7 +3,7 @@ import { NativeModules } from "react-native";
 let { RNLocalAuthenticate } = NativeModules;
 
 class LocalAuthenticate {
-  static HasHardware() {
+  static hasHardware() {
     return new Promise(function (resolve) {
         RNLocalAuthenticate.HasHardware((hasHardware) => {
             resolve(hasHardware === 1 ? true : false)
@@ -11,7 +11,7 @@ class LocalAuthenticate {
     });
   }
 
-  static IsEnrolled() {
+  static isEnrolled() {
     return new Promise(function (resolve) {
       RNLocalAuthenticate.IsEnrolled((isEnrolled) => {
         resolve(isEnrolled === 1 ? true : false)
@@ -19,7 +19,7 @@ class LocalAuthenticate {
     });
   }
 
-  static SupportedAuthenticationTypes() {
+  static supportedAuthenticationTypes() {
     return new Promise(function (resolve) {
       RNLocalAuthenticate.SupportedAuthenticationTypes((supportedAuthenticationTypes) => {
         resolve(supportedAuthenticationTypes)
@@ -27,7 +27,7 @@ class LocalAuthenticate {
     });
   }
   
-  static Authenticate(reason) {
+  static authenticate(reason) {
     return new Promise(function (resolve) {
       RNLocalAuthenticate.Authenticate(reason, (authenticate) => {
         resolve(authenticate === 1 ? true : false)
@@ -35,7 +35,7 @@ class LocalAuthenticate {
     });
   }
 
-  static CancelAuthenticate() {
+  static cancelAuthenticate() {
     return new Promise(function (resolve, reject) {
       if (!RNLocalAuthenticate.CancelAuthenticate) {
         reject()
